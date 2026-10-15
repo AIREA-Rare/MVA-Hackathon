@@ -1,0 +1,24 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest discover -s tests
+      - name: PatchLens output records and repository guard
+        run: python scripts/validate_patchlens_outputs.py
+      - name: Synthetic Track 1 fixture
+        run: python scripts/validate_track1.py fixtures/synthetic/track1_example.csv --synthetic --expected-proband SYNTHETIC_ONLY
