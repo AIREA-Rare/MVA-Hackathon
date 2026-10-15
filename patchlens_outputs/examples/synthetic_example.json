@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "SYNTHETIC_PL_001",
+  "passport_id": "SYNTHETIC_PASSPORT_001",
+  "data_class": "synthetic",
+  "backend": {
+    "name": "fictional_backend",
+    "version": "0.0.0",
+    "parameter_hash": null
+  },
+  "input": {
+    "gene": "FICTIONAL_GENE",
+    "transcript": null,
+    "protein_accession": null,
+    "residue_ref": null,
+    "residue_position": null,
+    "residue_alt": null,
+    "structure_source": null,
+    "structure_chain": null,
+    "structure_sha256": null
+  },
+  "applicability": {
+    "status": "not_assessed",
+    "reason": "backend_not_configured"
+  },
+  "metrics": {
+    "example_metric": null
+  },
+  "uncertainty_notes": [],
+  "boundaries": [
+    "Entirely fictional; demonstrates the record format only",
+    "Not a structural result, not a diagnosis, not a drug recommendation"
+  ],
+  "evidence_tier": "E4",
+  "call": null,
+  "artifact_sha256": null,
+  "acceptance_record": null,
+  "provenance": {
+    "structure_license": null,
+    "attribution": null
+  }
+}

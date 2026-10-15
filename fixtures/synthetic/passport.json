@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "passport_id": "SYNTHETIC_PASSPORT_001",
+  "data_class": "synthetic",
+  "build": "GRCh38",
+  "gene": "FICTIONAL_GENE",
+  "alleles": [
+    {
+      "chrom": "1",
+      "pos": 100001,
+      "ref": "A",
+      "alt": "G",
+      "transcript": null,
+      "consequence": null
+    },
+    {
+      "chrom": "1",
+      "pos": 100101,
+      "ref": "C",
+      "alt": "T",
+      "transcript": null,
+      "consequence": null
+    }
+  ],
+  "phase": "unknown",
+  "mechanism": {
+    "status": "unknown",
+    "direction": null,
+    "source_ids": []
+  },
+  "evidence": [
+    {
+      "id": "SYNTHETIC_E1",
+      "source": "fictional_fixture",
+      "kind": "synthetic",
+      "claim": "Demonstrates pair and uncertainty fields only",
+      "limitations": [
+        "No biological inference"
+      ]
+    }
+  ],
+  "patchlens": {
+    "status": "deferred",
+    "reason": "lab_acceptance_pending",
+    "call": null,
+    "evidence_tier": "E4",
+    "artifact_sha256": null,
+    "acceptance_record": null
+  },
+  "decision": "synthetic_demo",
+  "limitations": [
+    "Entirely fictional; not patient variants, not a causal result, not a drug recommendation"
+  ]
+}

@@ -1,0 +1,38 @@
+# Patient-derived, restricted or local material must never be committed
+*.vcf
+*.vcf.gz
+*.tbi
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.bam
+*.bai
+*.cram
+*.crai
+*.bcf
+*.csi
+*.sam
+*.fasta
+*.fa
+*.fna
+# Structures, weights and caches are PatchLens internals, not outputs
+*.pdb
+*.cif
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.npz
+*.pkl
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+# Local noise
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.log

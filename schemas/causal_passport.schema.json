@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Proposed MVA causal convergence passport v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "passport_id",
+    "data_class",
+    "build",
+    "gene",
+    "alleles",
+    "phase",
+    "mechanism",
+    "evidence",
+    "patchlens",
+    "decision",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "passport_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data_class": {
+      "enum": [
+        "synthetic",
+        "restricted",
+        "permitted_summary"
+      ]
+    },
+    "build": {
+      "const": "GRCh38"
+    },
+    "gene": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "alleles": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "chrom",
+          "pos",
+          "ref",
+          "alt",
+          "transcript",
+          "consequence"
+        ],
+        "properties": {
+          "chrom": {
+            "type": "string"
+          },
+          "pos": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "ref": {
+            "type": "string"
+          },
+          "alt": {
+            "type": "string"
+          },
+          "transcript": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "consequence": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "phase": {
+      "enum": [
+        "trans_supported",
+        "cis_supported",
+        "unknown",
+        "not_applicable",
+        "conflicting"
+      ]
+    },
+    "mechanism": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "direction",
+        "source_ids"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "supported_hypothesis",
+            "conditional",
+            "unknown"
+          ]
+        },
+        "direction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "kind",
+          "claim",
+          "limitations"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "literature",
+              "patient_computation",
+              "measured_experiment",
+              "synthetic",
+              "proposal"
+            ]
+          },
+          "claim": {
+            "type": "string"
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "patchlens": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reason",
+        "call",
+        "evidence_tier",
+        "artifact_sha256",
+        "acceptance_record"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "deferred",
+            "not_assessed",
+            "available",
+            "abstain"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "call": {
+          "type": "null"
+        },
+        "evidence_tier": {
+          "const": "E4"
+        },
+        "artifact_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "acceptance_record": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "available"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "artifact_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "acceptance_record": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "decision": {
+      "enum": [
+        "hold",
+        "prioritize_for_review",
+        "reject",
+        "synthetic_demo"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
