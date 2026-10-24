@@ -1,47 +1,106 @@
 # MVA-Hackathon
 
-Public showcase repository for AIREA's entry to the Rare Disease MVA Hackathon 2026.
+**Mechanism-first drug-repurposing hypotheses for mosaic variegated aneuploidy (MVA).**
+AIREA's Track 2 entry to the Rare Disease MVA Hackathon 2026.
 
-It holds the **outputs** that AIREA's PatchLens structural-evidence module produced for the competition, the competition-facing templates, and the checks that keep them consistent. It does **not** contain PatchLens source code, models, parameters, caches or structure files. PatchLens is developed in a separate, private AIREA repository.
+> **Research evidence assessment, not medical advice.** Nothing here is a diagnosis, a clinical variant classification or a treatment recommendation, and no dose is proposed. No wet-lab experiment was performed. No patient data are in this repository.
 
-## What PatchLens outputs mean here
+## The question
 
-- Every PatchLens record is structural evidence at tier **E4**, and its `call` field is always `null`.
-- A record is never a diagnosis, a pathogenicity verdict or a treatment recommendation.
-- Where PatchLens cannot assess a variant, the record says so (`not_assessed` or `abstain`) and every metric is `null`. A missing value is never written as zero.
-- Any performance figure added to this repository must carry its dataset and n, and a named comparator.
+Track 2 asks for repurposed, currently approved drugs that are supported by analysis of the participant's genetic data, together with the mechanism of the variants (loss or gain of function, pathway disrupted, downstream consequence). The submissions are hypotheses for follow-up, not evidence that a medicine works.
+
+## Approach
+
+1. **Establish what the data can show.** Variant quality control, locus-targeted read-level re-analysis, transcript and population checks, and an explicit list of what stays unresolved.
+2. **Test every drug idea as a causal chain.** Drug → target → cellular process → disease mechanism → phenotype. Each link is scored for supporting and for contradicting evidence, FDA and EMA status is verified, and a deterministic, documented rule assigns the category.
+3. **Stop where the evidence stops.** Every statement carries an evidence label, and the chain is shown where it breaks.
+
+```
+variants ─► causal gene ─► molecular mechanism ─► cellular defect ─► drug target ─► phenotype
+             UNRESOLVED     UNRESOLVED (missense)   gene level only     indirect      untested
+```
+
+## Findings at a glance
+
+- **BUB1B is the leading candidate gene, not a proven cause.** The data contain a known truncating *BUB1B* allele and a rare *BUB1B* missense change of unknown function. It leads because it has the complete set of genetic ingredients; that is completeness of a mechanism, not evidence of causation.
+- **Phase (cis or trans) is unresolved**, and **the missense change cannot be classified as damaging.**
+- *TRIP13*, *CEP57* and *CENATAC* could not be ranked against each other. An intronic *CEP57* read-level signal is unresolved.
+- **No drug has direct evidence of benefit in MVA.** Twelve candidates were assessed:
+
+| Category (deterministic rule) | Candidates |
+|---|---|
+| Stronger mechanistic research hypothesis | none |
+| Plausible but indirect | niacin (NAD+/SIRT2-dependent BUBR1 abundance; relevant only if residual BUBR1 protein exists); dasatinib (senescent-cell clearance, a downstream effect) |
+| Weak or nonspecific | gentamicin, dactinomycin, somatropin |
+| Contradicted or potentially counterproductive | acetylcysteine, bortezomib, vincristine, microtubule-poison / Aurora / PLK1 inhibitor class |
+| Out of scope (not currently approved, or a combination with an unapproved component) | NMN / nicotinamide riboside / nicotinamide; ataluren; dasatinib + quercetin |
+
+- The two surviving ideas are **indirect research hypotheses only.** The experiments in [`track2/FUNCTIONAL_TEST_DESIGNS.md`](track2/FUNCTIONAL_TEST_DESIGNS.md) are **designs; none was performed.**
+- The decisive next evidence is the phase of the two *BUB1B* variants and the function of the missense change. Their outcome changes the drug choice.
+
+## Where to start
+
+| You want | Open |
+|---|---|
+| The full Track 2 report (abstract, mechanism, evidence for and against, drug rationale, experiments, AI-use disclosure, references) | [`track2/AIREA_track2_report.md`](track2/AIREA_track2_report.md) |
+| The official methods-description workbook, Track 2 sheet filled | [`track2/AIREA_track2_methods_description_form.xlsx`](track2/AIREA_track2_methods_description_form.xlsx) |
+| A guided index to every section, by topic | [`track2/README.md`](track2/README.md) |
+| The twelve candidates and the ranking rule | [`track2/DRUG_HYPOTHESIS_ASSESSMENT.md`](track2/DRUG_HYPOTHESIS_ASSESSMENT.md) |
+| The two surviving hypotheses as evidence cards | [`track2/DRUG_EVIDENCE_CARD_NIACIN.md`](track2/DRUG_EVIDENCE_CARD_NIACIN.md), [`track2/DRUG_EVIDENCE_CARD_DASATINIB.md`](track2/DRUG_EVIDENCE_CARD_DASATINIB.md) |
+| The analysis code and how to run it | [`scripts/track2/README.md`](scripts/track2/README.md) |
 
 ## Layout
 
 | Path | Contents |
 |---|---|
-| `patchlens_outputs/` | PatchLens-derived output records, their [specification](patchlens_outputs/SPEC.md) and JSON schema. This is the only place PatchLens results go. |
-| `schemas/` | Proposed causal-convergence passport schema (v0.1). |
-| `track1/` | Track 1 templates and the header-only submission CSV. |
-| `track2/` | Track 2 evidence-card and report templates, and the draft Track 2 evidence summary (see [track2/README.md](track2/README.md)). |
-| `fixtures/synthetic/` | Fictional examples that demonstrate the formats. They contain no patient data and no real result. |
-| `scripts/` | Standard-library checks: `validate_track1.py` (CSV syntax) and `validate_patchlens_outputs.py` (output records and repository guard). `scripts/track2/` holds the sanitised Track 2 analysis code ([README](scripts/track2/README.md)). |
-| `tests/` | Unit tests for both checks. |
+| `track2/` | The report, the methods workbook, the scientific summary, methods, drug assessment, functional-test designs, references, evidence cards and the competition templates |
+| `scripts/track2/` | The sanitised analysis scripts behind the report, in run order, with templates for the private configuration |
+| `scripts/` | `check_repository.py`, a guard against restricted files, local paths and secrets |
+| `tests/` | Unit tests for the drug-ranking rule and the repository guard |
 
-## Run the checks
+## Reproducibility
 
-Python 3.10 or newer. No dependencies.
+- **Without the dataset:** the drug categories can be re-derived. Run `python scripts/track2/k5/drug_ranking.py`; the unit test checks that all twelve published categories follow from the criteria table. The criteria values are curated judgements: the test checks that the categories follow from them, not that the judgements are right.
+- **With the dataset:** the analysis scripts in [`scripts/track2/`](scripts/track2/README.md) are the ones actually used. Participant-specific values sit in git-ignored private files, and committed templates document every key. Re-running them needs the organiser's gated dataset under its terms, and the tools and versions in [`track2/METHODS.md`](track2/METHODS.md).
+- **Not reproducible from this repository alone:** the patient-level numbers, and the ledger and table builders that embed restricted evidence text.
+- The analyses and their validation scripts were written by the same AI coding assistant, under the team's direction. Their validation results show internal consistency, not independent validation.
 
 ```bash
-python -m unittest discover -s tests
-python scripts/validate_patchlens_outputs.py
-python scripts/validate_track1.py fixtures/synthetic/track1_example.csv --synthetic --expected-proband SYNTHETIC_ONLY
+python -m unittest discover -s tests          # unit tests (Python 3.12 in CI; standard library only)
+python scripts/check_repository.py            # restricted files, local paths, secrets
+python scripts/track2/k5/drug_ranking.py      # re-derive the twelve drug categories
 ```
 
-The checks confirm packaging and file syntax. They do not measure biological correctness or competitive performance.
+The checks confirm packaging, file syntax and the ranking rule. They do not test the biological findings or measure competitive performance.
+
+## Evidence labels
+
+| Label | Meaning |
+|---|---|
+| measured | Computed by us from the data, with a recorded script and output |
+| database-observed | Read from a public database record (ClinVar, gnomAD, UniProt, openFDA, EMA) |
+| predicted | A computational expectation (for example an NMD rule), not an observation |
+| indirect | Published evidence about another variant, model or disease |
+| hypothesis | A proposed explanation not yet tested |
+| unknown | Not determinable with the available data |
+
+Stages: **K2** literature, mechanism and competing genes · **K3** read-level re-analysis · **K4** phase, missense mechanism and the *CEP57* signal · **K5** drug-repurposing hypotheses · **K6** functional variant assessment.
 
 ## Data and privacy
 
-No patient data, variants, genomes or identifying phenotype are stored here. The competition dataset is access-restricted and stays in approved private storage. Candidate content is published only where the organizer's rules permit it.
+The analysis used a single-sample dataset provided by the organiser, under the organiser's terms. It is access-restricted, stays in approved private storage and is not redistributed here. This repository contains no genotype, read-level value, genomic coordinate, variant notation of the participant's alleles, sample identifier, phenotype list or secondary finding; the alleles are described **by class only**. Candidate content is published only where the organiser's rules permit it.
 
-## Contributing
+## AI assistance
 
-PatchLens outputs are added by the PatchLens developer through pull requests. See [CONTRIBUTING.md](CONTRIBUTING.md).
+The analysis scripting, public-source retrieval, evidence tabulation and drafting used an AI coding assistant under the team's direction. Provider, plan, data-handling setting and what was processed are stated in the report ([section 14](track2/AIREA_track2_report.md#14-privacy-ethics-and-ai-use-disclosure)) and in the methods workbook (A9).
+
+## Limitations
+
+- Phase of the *BUB1B* variants and the function of the missense change are unresolved, so every *BUB1B*-directed drug idea inherits that uncertainty.
+- Variant classes that short reads or locus-targeted recovery cannot detect are not assessed.
+- Literature was read mostly at abstract level, and searches read first result pages only. Each reference states the access level actually used.
+- Regulatory status was checked for the FDA and, where pages exist, the EMA.
+- No wet-lab data. The hypotheses are for follow-up and do not demonstrate efficacy.
 
 ## Licence and attribution
 

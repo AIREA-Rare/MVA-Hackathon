@@ -1,6 +1,6 @@
 # Track 2: AIREA submission package (not yet submitted)
 
-**Status:** final draft for the team's submission; the team still has to approve it. Not a clinical document: nothing here is a diagnosis or treatment advice. No PatchLens output is included; any PatchLens record goes only in `../patchlens_outputs/records/`.
+**Status:** final draft for the team's submission; the team still has to approve it. Not a clinical document: nothing here is a diagnosis or treatment advice.
 
 **Submission deliverables in this folder:**
 - **Report:** [`AIREA_track2_report.md`](AIREA_track2_report.md), the file to upload to the official Submit – Track 2 form.
