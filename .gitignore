@@ -15,7 +15,7 @@
 *.fasta
 *.fa
 *.fna
-# Structures, weights and caches are PatchLens internals, not outputs
+# Structures, weights and caches are never committed
 *.pdb
 *.cif
 *.pt

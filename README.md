@@ -55,11 +55,8 @@ variants ─► causal gene ─► molecular mechanism ─► cellular defect �
 |---|---|
 | `track2/` | The report, the methods workbook, the scientific summary, methods, drug assessment, functional-test designs, references, evidence cards and the competition templates |
 | `scripts/track2/` | The sanitised analysis scripts behind the report, in run order, with templates for the private configuration |
-| `scripts/` | `validate_patchlens_outputs.py`, the output-record check and repository guard |
-| `schemas/` | Proposed causal-convergence passport schema (v0.1) |
-| `patchlens_outputs/` | Optional structural-evidence output records for the PatchLens module, their [specification](patchlens_outputs/SPEC.md) and JSON schema. This is the only place PatchLens results go |
-| `fixtures/synthetic/` | Fictional examples that demonstrate the formats. They contain no patient data and no real result |
-| `tests/` | Unit tests for the drug-ranking rule and the output-record check |
+| `scripts/` | `check_repository.py`, a guard against restricted files, local paths and secrets |
+| `tests/` | Unit tests for the drug-ranking rule and the repository guard |
 
 ## Reproducibility
 
@@ -70,7 +67,7 @@ variants ─► causal gene ─► molecular mechanism ─► cellular defect �
 
 ```bash
 python -m unittest discover -s tests          # unit tests (Python 3.12 in CI; standard library only)
-python scripts/validate_patchlens_outputs.py  # output records and repository guard
+python scripts/check_repository.py            # restricted files, local paths, secrets
 python scripts/track2/k5/drug_ranking.py      # re-derive the twelve drug categories
 ```
 

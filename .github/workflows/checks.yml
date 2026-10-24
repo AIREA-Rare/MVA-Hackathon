@@ -18,5 +18,5 @@ jobs:
           python-version: "3.12"
       - name: Unit tests
         run: python -m unittest discover -s tests
-      - name: PatchLens output records and repository guard
-        run: python scripts/validate_patchlens_outputs.py
+      - name: Repository guard
+        run: python scripts/check_repository.py
