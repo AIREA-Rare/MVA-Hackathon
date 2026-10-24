@@ -1,6 +1,6 @@
 # AIREA — MVA Hackathon 2026, Track 2 (Drug Repurposing): detailed report
 
-**Team:** AIREA. **Status:** final draft for the team's submission; the team still has to approve it. Not yet submitted.
+**Team:** AIREA. **Status:** final version for submission (24 October 2026).
 
 **What this report is.** It proposes approved-drug **research hypotheses** for mosaic variegated aneuploidy (MVA), based on a mechanism-first analysis of the participant's genetic data. In line with the competition's framing, "submissions are hypotheses for follow-up, not evidence that a medicine works".
 - **It is not** a diagnosis, a clinical variant classification or a treatment recommendation, and **no dose is proposed**.
@@ -551,7 +551,7 @@ All four are follow-up research, not clinical steps.
 
 | Item | Status |
 |---|---|
-| Report | This file (`AIREA_track2_report.md`), also the file to upload to the Submit – Track 2 form |
+| Report | This file (`AIREA_track2_report.md`) and its PDF edition (`AIREA_track2_report.pdf`), the files for the Submit – Track 2 form |
 | Methods description | `AIREA_track2_methods_description_form.xlsx` (official template, Track 2 sheet filled) and Annex A |
 | GitHub repository | https://github.com/AIREA-Rare/MVA-Hackathon (public). |
 | Code | `scripts/track2/`: the analysis scripts actually used, in sanitised form. Private paths are an environment variable; participant-specific values (positions, alleles, a FASTQ prefix, two windows, residue-specific query terms) live in git-ignored private files with committed templates. The README gives requirements, configuration and run order. Ledger builders and stage validators are not included, because they embed restricted evidence text or expected values; the K5 ranking is reproducible with `scripts/track2/k5/drug_ranking.py` and `tests/test_track2_drug_ranking.py`. |

@@ -1,9 +1,9 @@
-# Track 2: AIREA submission package (not yet submitted)
+# Track 2: AIREA submission package
 
-**Status:** final draft for the team's submission; the team still has to approve it. Not a clinical document: nothing here is a diagnosis or treatment advice.
+**Status:** final version for submission (24 October 2026). Not a clinical document: nothing here is a diagnosis or treatment advice.
 
 **Submission deliverables in this folder:**
-- **Report:** [`AIREA_track2_report.md`](AIREA_track2_report.md), the file to upload to the official Submit – Track 2 form.
+- **Report:** [`AIREA_track2_report.md`](AIREA_track2_report.md) and its PDF edition [`AIREA_track2_report.pdf`](AIREA_track2_report.pdf), the files for the official Submit – Track 2 form.
 - **Methods description:** `AIREA_track2_methods_description_form.xlsx`, the official template with the Track 2 sheet filled. Its answers also appear in the report's Annex A.
 
 The pitch video is not part of this repository.
