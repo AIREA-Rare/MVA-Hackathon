@@ -18,7 +18,7 @@ It holds the **outputs** that AIREA's PatchLens structural-evidence module produ
 | `patchlens_outputs/` | PatchLens-derived output records, their [specification](patchlens_outputs/SPEC.md) and JSON schema. This is the only place PatchLens results go. |
 | `schemas/` | Proposed causal-convergence passport schema (v0.1). |
 | `track1/` | Track 1 templates and the header-only submission CSV. |
-| `track2/` | Track 2 evidence-card and report templates. |
+| `track2/` | Track 2 evidence-card and report templates, and the draft Track 2 evidence summary (see [track2/README.md](track2/README.md)). |
 | `fixtures/synthetic/` | Fictional examples that demonstrate the formats. They contain no patient data and no real result. |
 | `scripts/` | Standard-library checks: `validate_track1.py` (CSV syntax) and `validate_patchlens_outputs.py` (output records and repository guard). |
 | `tests/` | Unit tests for both checks. |
@@ -45,4 +45,8 @@ PatchLens outputs are added by the PatchLens developer through pull requests. Se
 
 ## Licence and attribution
 
-A licence has not been set yet. The repository owner chooses it before the final submission, and it must be compatible with the organizer's CC-BY requirement for submission materials. See [NOTICE.md](NOTICE.md).
+This repository is licensed under [CC BY 4.0](LICENSE), consistent with the Hackathon's Official Rules for participant submissions. The gated competition dataset is not covered and is not redistributed; third-party material is cited, not relicensed. See [NOTICE.md](NOTICE.md).
+
+## Acknowledgement
+
+> "This work was made possible through the Hackathon, organized by Sage Bionetworks in partnership with the MVA Society, Hugging Face, and BEACON (The Benchmarking, Evaluation, and Assessment Consortium for Science), with prize sponsorship from AWS and Anthropic. We are deeply grateful to the child and their family who generously contributed their data and their story to advance research into this rare disease. We acknowledge their trust in making this Hackathon possible."
