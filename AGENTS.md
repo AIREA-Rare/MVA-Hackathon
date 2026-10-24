@@ -4,7 +4,7 @@ Codex, Claude Code and any other agent working in this repo must follow this fil
 
 ## What this repo is
 
-The AIREA repository for the Rare Disease MVA Hackathon 2026, focused on **Track 2** (drug-repurposing hypotheses for MVA). It is **private now and will be made public at submission**, so treat every file as public. It holds the Track 2 report, methods and sanitised analysis code.
+The AIREA repository for the Rare Disease MVA Hackathon 2026, focused on **Track 2** (drug-repurposing hypotheses for MVA). It is **public**, so treat every file as public. It holds the Track 2 report, methods and sanitised analysis code.
 
 ## Hard rules
 
