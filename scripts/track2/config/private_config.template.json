@@ -1,0 +1,8 @@
+{
+ "_comment": "Template only. Copy to private_config.json (git-ignored), fill with the participant-specific values derived from the gated dataset, and point MVA_PRIVATE_CONFIG to it. Never commit the filled file.",
+ "k3_phase_het_chain_region": "CHR:START-END  (bcftools region spanning the BUB1B candidate sites; used by k3/k3_phase.py)",
+ "k3_followup_softmask_window": ["START", "END"],
+ "k4_lit_neighbour_patterns": {"<published neighbouring variant label>": "<regex>", "<annotated neighbouring site label>": "<regex>"},
+ "k6_lit_neighbour_query": "<Europe PMC query naming the published neighbouring variant>",
+ "k6_lit_neighbour_pattern": "<regex for the published neighbouring variant>"
+}

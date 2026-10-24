@@ -471,7 +471,7 @@ The full cards are `DRUG_EVIDENCE_CARD_NIACIN.md` and `DRUG_EVIDENCE_CARD_DASATI
 - tools, versions, parameters and reference releases are in section 6 and `METHODS.md`;
 - the drug categories can be re-derived by hand from the published criteria;
 - re-running the patient-level analyses needs the organiser's dataset under its terms;
-- the analysis scripts are held privately because they embed restricted inputs (section 17).
+- the analysis scripts are released in sanitised form in `scripts/track2/`: participant-specific values move to private configuration files; the logic is unchanged (section 17).
 
 **Compute:**
 - one workstation;
@@ -554,7 +554,7 @@ All four are follow-up research, not clinical steps.
 | Report | This file (`AIREA_track2_report.md`), also the file to upload to the Submit – Track 2 form |
 | Methods description | `AIREA_track2_methods_description_form.xlsx` (official template, Track 2 sheet filled) and Annex A |
 | GitHub repository | https://github.com/AIREA-Rare/MVA-Hackathon. It must be public when the Hackathon ends (an owner action). |
-| Code | The official GitHub guidance asks for documented, reproducible code. The analysis scripts embed restricted inputs and patient-derived parameters, and this repository's policy currently excludes code from the team's private research repository. **How the code requirement is met is a pending repository-owner decision.** The organisers also accept a Synapse project as an alternative channel. Tools, parameters and decision rules are documented here so the methods can be followed. |
+| Code | `scripts/track2/`: the analysis scripts actually used, in sanitised form. Private paths are an environment variable; participant-specific values (positions, alleles, a FASTQ prefix, two windows, residue-specific query terms) live in git-ignored private files with committed templates. The README gives requirements, configuration and run order. Ledger builders and stage validators are not included, because they embed restricted evidence text or expected values; the K5 ranking is reproducible with `scripts/track2/k5/drug_ranking.py` and `tests/test_track2_drug_ranking.py`. |
 | Pitch video | Not part of this repository |
 
 ## 18. References

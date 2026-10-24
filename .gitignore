@@ -36,3 +36,7 @@ __pycache__/
 .venv/
 .pytest_cache/
 *.log
+
+# Track 2 analysis code: participant-specific values stay private (templates are committed instead)
+scripts/track2/config/private_config.json
+scripts/track2/config/private.env
