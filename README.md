@@ -97,10 +97,6 @@ The analysis used a single-sample dataset provided by the organiser, under the o
 
 The analysis scripting, public-source retrieval, evidence tabulation and drafting used an AI coding assistant under the team's direction. Provider, plan, data-handling setting and what was processed are stated in the report ([section 14](track2/AIREA_track2_report.md#14-privacy-ethics-and-ai-use-disclosure)) and in the methods workbook (A9).
 
-## PatchLens (optional module)
-
-PatchLens structural evidence is not required for this Track 2 entry. If records are added, each is tier **E4** with `call` always `null`, never a diagnosis or a pathogenicity verdict, and unavailable values are `null`, never zero. PatchLens source code, models, parameters, caches and structure files are not in this repository; PatchLens is developed in a separate, private AIREA repository. See [CONTRIBUTING.md](CONTRIBUTING.md).
-
 ## Limitations
 
 - Phase of the *BUB1B* variants and the function of the missense change are unresolved, so every *BUB1B*-directed drug idea inherits that uncertainty.
