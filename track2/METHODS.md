@@ -7,6 +7,7 @@ All patient-level steps ran in approved private storage, outside every Git repos
 | Input | Description |
 |---|---|
 | Participant dataset | The organiser-provided single-sample whole-genome dataset (small-variant VCF and paired-end FASTQ files), used under the organiser's terms. One sample; no parental or family data; no RNA; no cytogenetics. |
+| What the VCF can and cannot show | It lists variant sites only (no reference blocks), so a missing record says nothing about coverage there. It contains no structural-variant, copy-number or mobile-element calls. Its only phase information is short-range, read-backed phase sets, which do not cover the BUB1B candidate variants. These limits are why the read-level re-analysis was done. |
 | Phenotype | A phenotype summary supplied by the team was used at gene level only: to compare the four genes and to keep alternative explanations open. It was not used to classify any variant. No phenotype list appears here. |
 
 ## Software
@@ -110,6 +111,7 @@ Locus-targeted read recovery was used instead of a whole-genome alignment:
 | Residue conservation beyond one paralog | No local alignment; downloads not authorised |
 | Repeat classification or local assembly of the CEP57 signal; structural-variant population lookup | Tools or database not available; an external lookup would expose a position |
 | gnomAD frequency of the TRIP13, CEP57 and CENATAC records | Needs an owner-approved regional read; not done |
+| Mutant structure modelling and ΔΔG (FoldX, Rosetta, FASPR, precomputed predictions) | A documented go/no-go review returned **no-go**. Licence eligibility was unconfirmed for FoldX and Rosetta, and the data licence for precomputed predictions was unverified. No method-error benchmark was established, so a result could not be interpreted. Any future ΔΔG would be a prediction on a predicted model, not evidence of pathogenicity. |
 | Full-text reading of most key papers | Not open access |
 | Wet-lab experiments | Designs only |
 

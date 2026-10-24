@@ -90,6 +90,34 @@ Sources: openFDA `drugsfda` and `label` records, and EMA EPAR pages or the EMA m
 
 **Limits:** openFDA states its data are unvalidated. EU national authorisations and other jurisdictions were not checked, and an unchecked register is not treated as empty.
 
+### Causal-chain link status
+
+Each candidate was assessed over five links:
+- **L1:** drug → target;
+- **L2:** target → cellular process;
+- **L3:** process → disease mechanism;
+- **L4:** mechanism → MVA phenotype;
+- **L5:** dependence on which gene or variant hypothesis is true.
+
+The table gives each link's status as recorded. "Supported" refers to the stated evidence level (often gene-level, mouse or another disease), not to benefit in MVA.
+
+| Candidate | L1 | L2 | L3 | L4 | L5 |
+|---|---|---|---|---|---|
+| dasatinib | supported | supported (cell-type dependent) | supported for ageing-type phenotypes | unknown for core phenotypes; possible harm | unknown |
+| niacin | supported (blood NAD+) | supported (mouse; NMN, not niacin) | supported at gene level | unknown | unknown |
+| gentamicin | supported (other disease) | contradicted in part: the truncating allele is predicted NMD-sensitive | unknown: read-through inserts a near-cognate amino acid of unknown function | supported at gene level | unknown |
+| NMN / nicotinamide riboside / nicotinamide | supported (mouse) | supported (mouse) | supported at gene level | unknown | out of scope (not approved) |
+| ataluren | mechanism claim supported; efficacy contradicted | contradicted (other disease) | contradicted in part | unknown | out of scope (not approved) |
+| dasatinib + quercetin | supported (non-MVA progeroid mice) | supported (non-MVA model) | supported for ageing-type phenotypes | unknown | out of scope (quercetin not approved) |
+| acetylcysteine | supported | supported (ageing-related instability; class level) | supported (genetic, fly) | contradicted (safety: tumour promotion) | unknown |
+| bortezomib | supported | unknown | unknown | contradicted (expected direction; source unverified) | unknown |
+| microtubule poisons / Aurora / PLK1 inhibitors | supported | supported | contradicted (wrong direction) | contradicted | contradicted |
+| dactinomycin | supported | supported | unknown (no rationale) | not an MVA hypothesis | not applicable |
+| vincristine | supported | supported | contradicted | not an MVA hypothesis | contradicted |
+| somatropin | supported | supported | unknown (no rationale) | contradicted (weak); safety concern | not applicable |
+
+No candidate has all five links supported for MVA, and **none has L4 supported by direct MVA evidence**.
+
 ## How the open genetic questions change each surviving idea
 
 | Scenario | Dasatinib | Niacin | Gentamicin |

@@ -21,8 +21,29 @@ BUB1B is the **leading candidate gene, not a proven cause**. The data contain a 
 | `METHODS.md` | Data, tools, versions, parameters, decision rules, validation and audit, analyses not run |
 | `DRUG_HYPOTHESIS_ASSESSMENT.md` | The 12 drug candidates, their criteria, the ranking rule, the result and regulatory status |
 | `FUNCTIONAL_TEST_DESIGNS.md` | Proposed experiments for the variants and the two surviving drug hypotheses (not performed), what each would discriminate, and why no published experiment can be graded |
+| `DRUG_EVIDENCE_CARD_DASATINIB.md`, `DRUG_EVIDENCE_CARD_NIACIN.md` | The two surviving approved-drug hypotheses, each filled into the competition card template |
 | `REFERENCES.md` | Sources, with the access level actually used (full text, abstract, database record) |
 | `REPORT_TEMPLATE.md`, `DRUG_EVIDENCE_CARD_TEMPLATE.md` | Competition templates (unchanged) |
+
+## Track 2 index
+
+| Topic | Where |
+|---|---|
+| Overall workflow (K2–K6) | [Workflow](SCIENTIFIC_SUMMARY.md#workflow) |
+| Boundaries on every claim | [Boundaries that hold throughout](SCIENTIFIC_SUMMARY.md#boundaries-that-hold-throughout) |
+| Candidate variants, by class | [Candidate variants](SCIENTIFIC_SUMMARY.md#the-participants-candidate-variants-by-class) |
+| Sequencing confidence versus function versus causality | [Three separate questions](SCIENTIFIC_SUMMARY.md#three-separate-questions-for-the-candidate-pair) |
+| **K2:** literature, four-gene comparison, competing explanations | [K2](SCIENTIFIC_SUMMARY.md#k2-literature-mechanism-and-competing-genes), [four-gene comparison](SCIENTIFIC_SUMMARY.md#four-gene-comparison), [competing explanations](SCIENTIFIC_SUMMARY.md#competing-explanations-and-their-current-status) |
+| **K3:** read-level robustness, callability, structural screens, sensitivity | [K3](SCIENTIFIC_SUMMARY.md#k3-read-level-re-analysis), [methods](METHODS.md#read-level-re-analysis-k3-k4) |
+| **K4:** phase, missense mechanisms, CEP57 signal | [K4](SCIENTIFIC_SUMMARY.md#k4-phase-missense-mechanism-and-the-cep57-signal) |
+| **K5:** drug-repurposing assessment | [Assessment](DRUG_HYPOTHESIS_ASSESSMENT.md), [regulatory status](DRUG_HYPOTHESIS_ASSESSMENT.md#regulatory-status-as-checked-2026-10-24), [causal-chain links](DRUG_HYPOTHESIS_ASSESSMENT.md#causal-chain-link-status), [dasatinib card](DRUG_EVIDENCE_CARD_DASATINIB.md), [niacin card](DRUG_EVIDENCE_CARD_NIACIN.md) |
+| **K6:** functional evidence and assay validity | [K6](SCIENTIFIC_SUMMARY.md#k6-functional-variant-assessment), [assay designs](FUNCTIONAL_TEST_DESIGNS.md#part-1-variant-function-assays-stage-k6) |
+| Proposed experiments (designs only) | [Variant assays](FUNCTIONAL_TEST_DESIGNS.md#part-1-variant-function-assays-stage-k6), [what each discriminates](FUNCTIONAL_TEST_DESIGNS.md#what-each-assay-is-designed-to-tell-apart), [drug tests](FUNCTIONAL_TEST_DESIGNS.md#part-2-drug-hypothesis-tests-stage-k5) |
+| Methods, software and parameters | [Software](METHODS.md#software), [reference data](METHODS.md#reference-data), [input data](METHODS.md#input-data) |
+| Validation and audit (with their limits) | [Integrity controls](METHODS.md#integrity-controls) |
+| Limitations and alternative explanations | [Competing explanations](SCIENTIFIC_SUMMARY.md#competing-explanations-and-their-current-status), [what would change the conclusions](SCIENTIFIC_SUMMARY.md#what-would-change-the-conclusions), [analyses not run](METHODS.md#analyses-not-run-and-why), [what the methods cannot show](METHODS.md#what-these-methods-cannot-show), [drug limits](DRUG_HYPOTHESIS_ASSESSMENT.md#limits) |
+| References and access levels | [References](REFERENCES.md) |
+| Reproducibility | [Reproducibility](#reproducibility) |
 
 ## Evidence labels
 
@@ -43,6 +64,8 @@ Every scientific statement carries one label:
 - Re-running them needs the organiser's dataset under its terms.
 - `METHODS.md` gives the tools, versions, parameters and reference data. `DRUG_HYPOTHESIS_ASSESSMENT.md` gives the full drug-level criteria and the ranking rule, so the drug categories can be re-derived by hand from this repository.
 - This repository's checks (`../scripts/`, `../tests/`) confirm packaging and file syntax only. They do not test these findings.
+- The analyses and their validation scripts were written by the same AI coding assistant, under the team's direction. The validation results show internal consistency, not independent validation (`METHODS.md`, "Integrity controls").
+- Not produced: figures, wet-lab results, mutant-structure or ΔΔG results.
 
 ## Data policy
 
