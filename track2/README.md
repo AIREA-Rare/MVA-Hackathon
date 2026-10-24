@@ -17,6 +17,7 @@ BUB1B is the **leading candidate gene, not a proven cause**. The data contain a 
 
 | File | Content |
 |---|---|
+| `TRACK2_REPORT.md` | **The Track 2 detailed report** (draft for owner approval). It follows `REPORT_TEMPLATE.md` and includes the abstract and the Track 2 methods-form answers; owner-only fields are marked |
 | `SCIENTIFIC_SUMMARY.md` | Workflow; the candidate variants by class; sequencing confidence versus function versus causality; four-gene comparison; competing explanations; findings of stages K2–K6 with evidence labels; what would change the conclusions |
 | `METHODS.md` | Data, tools, versions, parameters, decision rules, validation and audit, analyses not run |
 | `DRUG_HYPOTHESIS_ASSESSMENT.md` | The 12 drug candidates, their criteria, the ranking rule, the result and regulatory status |
@@ -29,6 +30,7 @@ BUB1B is the **leading candidate gene, not a proven cause**. The data contain a 
 
 | Topic | Where |
 |---|---|
+| **Detailed report** (submission deliverable) | [Track 2 report](TRACK2_REPORT.md), [abstract](TRACK2_REPORT.md#abstract--500-words), [methods-form answers](TRACK2_REPORT.md#annex-track-2-methods-form-answers-sheet-track-2-methods), [causal evidence diagram](TRACK2_REPORT.md#figures) |
 | Overall workflow (K2–K6) | [Workflow](SCIENTIFIC_SUMMARY.md#workflow) |
 | Boundaries on every claim | [Boundaries that hold throughout](SCIENTIFIC_SUMMARY.md#boundaries-that-hold-throughout) |
 | Candidate variants, by class | [Candidate variants](SCIENTIFIC_SUMMARY.md#the-participants-candidate-variants-by-class) |
@@ -65,7 +67,7 @@ Every scientific statement carries one label:
 - `METHODS.md` gives the tools, versions, parameters and reference data. `DRUG_HYPOTHESIS_ASSESSMENT.md` gives the full drug-level criteria and the ranking rule, so the drug categories can be re-derived by hand from this repository.
 - This repository's checks (`../scripts/`, `../tests/`) confirm packaging and file syntax only. They do not test these findings.
 - The analyses and their validation scripts were written by the same AI coding assistant, under the team's direction. The validation results show internal consistency, not independent validation (`METHODS.md`, "Integrity controls").
-- Not produced: figures, wet-lab results, mutant-structure or ΔΔG results.
+- Not produced: image figures (the report contains one text-based causal diagram), wet-lab results, mutant-structure or ΔΔG results.
 
 ## Data policy
 
