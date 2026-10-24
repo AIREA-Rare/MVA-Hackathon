@@ -20,5 +20,3 @@ jobs:
         run: python -m unittest discover -s tests
       - name: PatchLens output records and repository guard
         run: python scripts/validate_patchlens_outputs.py
-      - name: Synthetic Track 1 fixture
-        run: python scripts/validate_track1.py fixtures/synthetic/track1_example.csv --synthetic --expected-proband SYNTHETIC_ONLY

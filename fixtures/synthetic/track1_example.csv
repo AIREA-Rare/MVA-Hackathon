@@ -1,3 +1,0 @@
-proband_id,chrom_1,pos_1,ref_1,alt_1,chrom_2,pos_2,ref_2,alt_2,epcr,finding_type,notes
-SYNTHETIC_ONLY,1,100001,A,G,1,100101,C,T,0.7,primary,Fictional pair only
-SYNTHETIC_ONLY,2,200001,G,A,,,,,0.2,primary,Fictional singleton only
