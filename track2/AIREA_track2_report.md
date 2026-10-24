@@ -553,7 +553,7 @@ All four are follow-up research, not clinical steps.
 |---|---|
 | Report | This file (`AIREA_track2_report.md`), also the file to upload to the Submit – Track 2 form |
 | Methods description | `AIREA_track2_methods_description_form.xlsx` (official template, Track 2 sheet filled) and Annex A |
-| GitHub repository | https://github.com/AIREA-Rare/MVA-Hackathon. It must be public when the Hackathon ends (an owner action). |
+| GitHub repository | https://github.com/AIREA-Rare/MVA-Hackathon (public). |
 | Code | `scripts/track2/`: the analysis scripts actually used, in sanitised form. Private paths are an environment variable; participant-specific values (positions, alleles, a FASTQ prefix, two windows, residue-specific query terms) live in git-ignored private files with committed templates. The README gives requirements, configuration and run order. Ledger builders and stage validators are not included, because they embed restricted evidence text or expected values; the K5 ranking is reproducible with `scripts/track2/k5/drug_ranking.py` and `tests/test_track2_drug_ranking.py`. |
 | Pitch video | Not part of this repository |
 
