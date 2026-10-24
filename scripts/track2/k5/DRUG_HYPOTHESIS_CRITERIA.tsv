@@ -1,0 +1,13 @@
+candidate_id	drug	C0_currently_approved	C1_target_relation	C2_expected_direction	C3_direct_MVA_evidence	C4_best_experimental_support	C5_contradiction_or_harm	C6_links_supported_of_5	C6_links_contradicted	C7_test_feasibility
+WP5-H1	dasatinib	yes	downstream	compensate	none	genetic-or-related-compound-in-MVA-gene-model	moderate	3	0	moderate
+WP5-R1	niacin (nicotinic acid)	yes	regulator	restore	none	genetic-or-related-compound-in-MVA-gene-model	moderate	3	0	high
+K25-D1	dactinomycin	yes	none	neutral	none	none	major-disease-aligned-label	2	0	low
+WP5-H2	gentamicin	yes	direct	restore	none	drug-in-other-disease	major-other	2	1	high
+K25-D3	somatropin	yes	none	neutral	none	none	major-disease-aligned-label	2	1	low
+WP5-R5	acetylcysteine (NAC)	yes	downstream	compensate	none	genetic-or-related-compound-in-MVA-gene-model	major-disease-aligned-experimental	3	1	moderate
+K25-D2	vincristine	yes	opposing	perturb	none	none	major-disease-aligned-experimental	2	2	low
+WP5-R7	microtubule poisons / Aurora / PLK1 inhibitors (class)	yes	opposing	perturb	none	none	major-disease-aligned-experimental	2	3	high
+WP5-R6	bortezomib	yes	regulator	perturb	none	none	major-other	1	1	moderate
+WP5-R2	NMN / nicotinamide riboside / nicotinamide	no	regulator	restore	none	genetic-or-related-compound-in-MVA-gene-model	minor	3	0	high
+WP5-R4	dasatinib + quercetin	no	downstream	compensate	none	genetic-or-related-compound-in-MVA-gene-model	moderate	3	0	moderate
+WP5-R3	ataluren	no	direct	restore	none	drug-in-other-disease	moderate	1	2	high

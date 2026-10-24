@@ -69,7 +69,8 @@ Every scientific statement carries one label:
 
 ## Reproducibility
 
-- The patient-level analyses ran in approved private storage, under the organiser's data terms. Their inputs, outputs and scripts are restricted and are **not** in this repository; the scripts embed restricted inputs and patient-derived parameters.
+- The patient-level analyses ran in approved private storage, under the organiser's data terms. Their inputs and outputs are restricted and are **not** in this repository.
+- **Code:** the analysis scripts are in [`../scripts/track2/`](../scripts/track2/README.md), in sanitised form. Participant-specific values sit in git-ignored private files, and the committed templates document every key. The README there gives the run order, what is not included and why, and the equivalence checks.
 - Re-running them needs the organiser's dataset under its terms.
 - `METHODS.md` gives the tools, versions, parameters and reference data. `DRUG_HYPOTHESIS_ASSESSMENT.md` gives the full drug-level criteria and the ranking rule, so the drug categories can be re-derived by hand from this repository.
 - This repository's checks (`../scripts/`, `../tests/`) confirm packaging and file syntax only. They do not test these findings.
