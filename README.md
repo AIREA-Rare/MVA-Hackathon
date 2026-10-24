@@ -18,7 +18,7 @@ It holds the **outputs** that AIREA's PatchLens structural-evidence module produ
 | `patchlens_outputs/` | PatchLens-derived output records, their [specification](patchlens_outputs/SPEC.md) and JSON schema. This is the only place PatchLens results go. |
 | `schemas/` | Proposed causal-convergence passport schema (v0.1). |
 | `track1/` | Track 1 templates and the header-only submission CSV. |
-| `track2/` | Track 2 evidence-card and report templates. |
+| `track2/` | Track 2 evidence-card and report templates, and the draft Track 2 evidence summary (see [track2/README.md](track2/README.md)). |
 | `fixtures/synthetic/` | Fictional examples that demonstrate the formats. They contain no patient data and no real result. |
 | `scripts/` | Standard-library checks: `validate_track1.py` (CSV syntax) and `validate_patchlens_outputs.py` (output records and repository guard). |
 | `tests/` | Unit tests for both checks. |
