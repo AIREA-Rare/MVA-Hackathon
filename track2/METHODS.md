@@ -1,6 +1,6 @@
 # Methods (draft, 2026-10-24)
 
-All patient-level steps ran in approved private storage, outside every Git repository. No genotype, read or identifier was written to a version-controlled file. The scripts were designed to print counts and status lines only. External database and literature queries used generic gene, drug or process terms and public identifiers only; no patient coordinate, variant notation, sample identifier or phenotype combination was included in any of them. The analysis was run with a cloud AI coding assistant, which processed command output, including variant-level information. Its use is covered by the team's AI-use disclosure.
+All patient-level steps ran in approved private storage, outside every Git repository. No genotype, read or identifier was written to a version-controlled file. The scripts were designed to print counts and status lines only. External database and literature queries used generic gene, drug or process terms and public identifiers only; no patient coordinate, variant notation, sample identifier or phenotype combination was included in any of them. The analysis was run with a cloud AI coding assistant, which processed command output, including variant-level information. Its use is disclosed in `AIREA_track2_report.md`, section 14 (provider, tier, data-handling setting and what was processed).
 
 ## Input data
 

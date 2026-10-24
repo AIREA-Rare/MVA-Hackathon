@@ -1,6 +1,12 @@
-# Track 2: draft evidence summary (not submitted)
+# Track 2: AIREA submission package (not yet submitted)
 
-**Status:** draft for owner review. Not submitted, not a clinical document. Nothing here is a diagnosis or treatment advice. No PatchLens output is included; any PatchLens record goes only in `../patchlens_outputs/records/`.
+**Status:** final draft for the team's submission; the team still has to approve it. Not a clinical document: nothing here is a diagnosis or treatment advice. No PatchLens output is included; any PatchLens record goes only in `../patchlens_outputs/records/`.
+
+**Submission deliverables in this folder:**
+- **Report:** [`AIREA_track2_report.md`](AIREA_track2_report.md), the file to upload to the official Submit – Track 2 form.
+- **Methods description:** `AIREA_track2_methods_description_form.xlsx`, the official template with the Track 2 sheet filled. Its answers also appear in the report's Annex A.
+
+The pitch video is not part of this repository.
 
 ## Objective
 
@@ -17,7 +23,8 @@ BUB1B is the **leading candidate gene, not a proven cause**. The data contain a 
 
 | File | Content |
 |---|---|
-| `TRACK2_REPORT.md` | **The Track 2 detailed report** (draft for owner approval). It follows `REPORT_TEMPLATE.md` and includes the abstract and the Track 2 methods-form answers; owner-only fields are marked |
+| `AIREA_track2_report.md` | **The Track 2 detailed report.** Contents: mechanism characterisation, results by stage, evidence for and against each conclusion, drug rationale and decision table, experiments, validation, AI-use disclosure, full references; mapped to the official criteria and to `REPORT_TEMPLATE.md` (Annex B) |
+| `AIREA_track2_methods_description_form.xlsx` | The official methods-description workbook, with the Track 2 sheet filled (A9, the required AI-use question, is answered). The structure is unchanged. |
 | `SCIENTIFIC_SUMMARY.md` | Workflow; the candidate variants by class; sequencing confidence versus function versus causality; four-gene comparison; competing explanations; findings of stages K2–K6 with evidence labels; what would change the conclusions |
 | `METHODS.md` | Data, tools, versions, parameters, decision rules, validation and audit, analyses not run |
 | `DRUG_HYPOTHESIS_ASSESSMENT.md` | The 12 drug candidates, their criteria, the ranking rule, the result and regulatory status |
@@ -30,7 +37,7 @@ BUB1B is the **leading candidate gene, not a proven cause**. The data contain a 
 
 | Topic | Where |
 |---|---|
-| **Detailed report** (submission deliverable) | [Track 2 report](TRACK2_REPORT.md), [abstract](TRACK2_REPORT.md#abstract--500-words), [methods-form answers](TRACK2_REPORT.md#annex-track-2-methods-form-answers-sheet-track-2-methods), [causal evidence diagram](TRACK2_REPORT.md#figures) |
+| **Detailed report** (submission deliverable) | [Report](AIREA_track2_report.md), [abstract](AIREA_track2_report.md#2-abstract), [variant mechanism](AIREA_track2_report.md#8-characterisation-of-the-variant-mechanism), [evidence for and against](AIREA_track2_report.md#9-evidence-for-and-against-each-material-conclusion), [AI-use disclosure](AIREA_track2_report.md#14-privacy-ethics-and-ai-use-disclosure), [methods-form answers](AIREA_track2_report.md#annex-a-methods-form-answers-official-template-sheet-track-2-methods), [causal diagram](AIREA_track2_report.md#annex-b-rubric-and-template-mapping) |
 | Overall workflow (K2–K6) | [Workflow](SCIENTIFIC_SUMMARY.md#workflow) |
 | Boundaries on every claim | [Boundaries that hold throughout](SCIENTIFIC_SUMMARY.md#boundaries-that-hold-throughout) |
 | Candidate variants, by class | [Candidate variants](SCIENTIFIC_SUMMARY.md#the-participants-candidate-variants-by-class) |
@@ -74,3 +81,12 @@ Every scientific statement carries one label:
 - This folder contains no genotype, no read-level value, no genomic coordinate, no variant notation of the participant's alleles, no sample identifier and no phenotype list.
 - The participant's alleles are described by class only ("a known truncating allele", "a rare missense change in the pseudokinase domain", "a deep-intronic variant of uncertain significance").
 - The content is limited to what the organiser's rules let teams keep and report: candidate genes, mechanisms and drug candidates. No secondary or incidental finding is included.
+
+## Licence and acknowledgement
+
+- **Licence of the submission:** under the Hackathon's Official Rules, participant submissions, code and reports are released under **CC BY 4.0**.
+- **Repository licence:** CC BY 4.0 ([`../LICENSE`](../LICENSE); scope in [`../NOTICE.md`](../NOTICE.md)).
+- **Third-party material** is cited, not redistributed, and keeps its own licence. AlphaFold DB data are CC BY 4.0.
+- **Acknowledgement** (required by the Official Rules):
+
+> "This work was made possible through the Hackathon, organized by Sage Bionetworks in partnership with the MVA Society, Hugging Face, and BEACON (The Benchmarking, Evaluation, and Assessment Consortium for Science), with prize sponsorship from AWS and Anthropic. We are deeply grateful to the child and their family who generously contributed their data and their story to advance research into this rare disease. We acknowledge their trust in making this Hackathon possible."

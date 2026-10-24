@@ -45,4 +45,8 @@ PatchLens outputs are added by the PatchLens developer through pull requests. Se
 
 ## Licence and attribution
 
-A licence has not been set yet. The repository owner chooses it before the final submission, and it must be compatible with the organizer's CC-BY requirement for submission materials. See [NOTICE.md](NOTICE.md).
+This repository is licensed under [CC BY 4.0](LICENSE), consistent with the Hackathon's Official Rules for participant submissions. The gated competition dataset is not covered and is not redistributed; third-party material is cited, not relicensed. See [NOTICE.md](NOTICE.md).
+
+## Acknowledgement
+
+> "This work was made possible through the Hackathon, organized by Sage Bionetworks in partnership with the MVA Society, Hugging Face, and BEACON (The Benchmarking, Evaluation, and Assessment Consortium for Science), with prize sponsorship from AWS and Anthropic. We are deeply grateful to the child and their family who generously contributed their data and their story to advance research into this rare disease. We acknowledge their trust in making this Hackathon possible."
