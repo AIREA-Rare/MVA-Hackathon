@@ -2,6 +2,8 @@
 
 The **access** column records what was actually read. Most literature was read at abstract level, as raw Europe PMC API text. A claim drawn from an abstract can be wrong about details that only the full text gives.
 
+**Caveat for K2-stage pages.** The external pages read in the K2 stage, including the GenCC gene–disease validity pages, went through a summarising web-fetch tool. For those reads, "database page" or "abstract" means a tool-generated summary of that page, not raw text. The load-bearing literature was later re-read as raw API text.
+
 Each reference is listed with the ID of the claim in the team's internal evidence ledgers (WP2, K3, K5, K6). The ledgers are restricted and not published; the IDs let the team trace each claim to its source record.
 
 ## Framework and rules
@@ -21,6 +23,8 @@ Each reference is listed with the ID of the claim in the team's internal evidenc
 | Suijkerbuijk et al. 2010. PMID 20516114 | Patient-cell checkpoint defect; fast turnover of kinase-domain missense | Abstract | K3-E29 |
 | BubR1 missense mouse model of a disease-reported human missense, *J Clin Invest* 2020. PMID 31738183 | A disease-reported missense in the same domain; allelic effects "beyond protein level" | Abstract | K6-E05 |
 | Silva et al. 2024. PMID 39014450 | Monoallelic BUB1B variants with decreased BubR1 expression or stability | Abstract | K6-E09 |
+| *Dev Cell* 2012. DOI 10.1016/j.devcel.2012.03.009 | Human BUBR1 catalysis is dispensable; ATP-interacting residues matter for conformational stability (mechanisms M1, M4) | Abstract | WP2-26 |
+| *Cell Rep* 2020. DOI 10.1016/j.celrep.2020.108397 | The pseudokinase domain promotes KARD phosphorylation and PP2A-B56 recruitment (mechanism M3) | Abstract | WP2-27 |
 | Baker et al. 2013. PMID 23242215 | Sustained high BubR1 expression reduces tumorigenesis and extends lifespan in mice | Abstract | K5-E17 |
 | PMID 40607964 (2025) | BubR1 insufficiency causes cardiac hypertrophy, fibrosis and senescence markers in mice | Abstract | K5-E16 |
 

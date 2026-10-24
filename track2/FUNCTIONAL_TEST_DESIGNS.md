@@ -14,6 +14,34 @@ Why these tests matter: the two open questions are BUB1B phase and the function 
 | 3 | **A3** Engineered NMD test of a stop of the same type as the truncating allele | Does the stop trigger NMD as predicted? | Allele-specific transcript level, with and without NMD inhibition | WT; an NMD-inhibitor arm | The stop allele's transcript is not reduced, or the reduction is not reversed by NMD inhibition |
 | — | **D** TRIP13, CEP57, CENATAC, CEP57 signal | — | — | — | No variant-specific assay is justified until stated prerequisites are met (for example, the CEP57 signal being confirmed as real) |
 
+### What each assay is designed to tell apart
+
+| Assay | Separates | A normal result would mean |
+|---|---|---|
+| B1 | M1 (reduced stability or turnover) from M0 (no effect) | Argues moderately against a dosage effect in these cells, if the controls separate |
+| C1 | M3 (impaired domain function at normal abundance) and M6 (effect only with a null allele) from M0 | Argues moderately against a checkpoint or segregation defect; says nothing about tissue-specific effects |
+| A1 | A splicing effect of the deep-intronic variant from no effect | Argues only weakly against an effect, because the native context is missing |
+| A3 | The NMD prediction for the truncating allele | Would contradict the prediction |
+
+The mechanism labels M0–M6 are defined in `SCIENTIFIC_SUMMARY.md` (K4).
+
+**Second-line options** (from the K4 plan; not prioritised):
+- an exon minigene for the missense change (A2; mechanism M5);
+- a phosphorylation assay (M2);
+- a purified-domain stability measurement (direct test of M1).
+
+### Can any published experiment be graded for these variants?
+
+**No.** The published experiments listed below were read at abstract level only, and none tested the participant's variants.
+
+| Published experiment | Tested | Why it cannot be graded here |
+|---|---|---|
+| Suijkerbuijk et al. 2010: patient cells, functional replacement, turnover of missense MVA mutants | Other MVA alleles | Different variants; controls and replicates cannot be assessed from an abstract |
+| BubR1 missense mouse model (*J Clin Invest* 2020) | A different, disease-reported missense | Not this variant; abstract-level access |
+| Matsuura et al. 2006: reduced transcripts of frameshift and splice alleles | Other alleles | Different variants |
+| Silva et al. 2024: lower expression or stability of monoallelic variants | Other alleles | Different variants |
+| Any experiment on the participant's variants | — | None exists |
+
 **Validity limits (ClinGen PS3/BS3 framework, Brnich et al. 2019):**
 - **Calibration:** ClinVar holds only one Likely pathogenic BUB1B missense control, against the framework's minimum of 11 pathogenic and benign controls in total for moderate evidence. These assays could therefore be research-calibrated only. **No PS3 or BS3 strength applies** to any variant, now or on the basis of these designs alone.
 - **Replication:** at least 2 independent clones and at least 3 biological replicates are required; imaging readouts must be scored blind.

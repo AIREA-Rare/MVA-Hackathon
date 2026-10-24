@@ -1,13 +1,13 @@
 # Methods (draft, 2026-10-24)
 
-All patient-level steps ran in approved private storage, outside every Git repository. Console output was limited to counts and status lines. No genotype, read or identifier was written to a tracked file. External queries used generic gene, drug or process terms only; no patient coordinate, variant notation, sample identifier or phenotype combination was sent to any external service.
+All patient-level steps ran in approved private storage, outside every Git repository. No genotype, read or identifier was written to a version-controlled file. The scripts were designed to print counts and status lines only. External database and literature queries used generic gene, drug or process terms and public identifiers only; no patient coordinate, variant notation, sample identifier or phenotype combination was included in any of them. The analysis was run with a cloud AI coding assistant, which processed command output, including variant-level information. Its use is covered by the team's AI-use disclosure.
 
 ## Input data
 
 | Input | Description |
 |---|---|
 | Participant dataset | The organiser-provided single-sample whole-genome dataset (small-variant VCF and paired-end FASTQ files), used under the organiser's terms. One sample; no parental or family data; no RNA; no cytogenetics. |
-| Phenotype | Not used for variant interpretation beyond the gene-level question of MVA. No phenotype list appears in this bundle. |
+| Phenotype | A phenotype summary supplied by the team was used at gene level only: to compare the four genes and to keep alternative explanations open. It was not used to classify any variant. No phenotype list appears here. |
 
 ## Software
 
@@ -68,17 +68,50 @@ Locus-targeted read recovery was used instead of a whole-genome alignment:
 
 - **Framework:** the ClinGen SVI PS3/BS3 recommendations (Brnich et al. 2019), steps 1–4.
 - **Paralog alignment:** BUBR1 against BUB1 pseudokinase/kinase domains, using local Smith–Waterman with BLOSUM62.
-- **ClinVar counts:** within ±10 residues of the missense change and gene-wide, on the MANE protein.
+- **ClinVar counts:** in a small window around the missense change, and gene-wide, on the MANE protein.
 - **No PS3/BS3 strength** was assigned to any proposed experiment.
 
 ## Integrity controls
 
-- Each stage ran independent validation checks, all of which passed: K2 12/12, K5 11/11, K6 10/10. K3 and K4 recorded their own checks.
-- Each stage kept checksums of all earlier packages and confirmed they were unchanged.
-- Corrections found during the work are documented, not silently fixed:
+- **Validation scripts.** Each stage ran one, recomputing key results by separate code paths (for example samtools or bcftools against the custom parsers) and checking schemas, cross-references, query privacy and document–table agreement:
+
+  | Stage | Checks | Result |
+  |---|---|---|
+  | K2 | 12 | all PASS |
+  | K3 | 15 | all PASS |
+  | K4 | 13 | all PASS |
+  | K5 | 11 | all PASS |
+  | K6 | 10 | all PASS |
+
+  **Limited independence:** the same AI assistant that did the analysis wrote these scripts. A pass shows internal consistency, not external validation.
+- **Separate audit of K2.** Its scientific findings:
+  - **Corrected before K3:** one overstated statement about a gene-level phenotype association, drawn from a single abstract, was narrowed in corrected copies, which later stages used.
+  - **Documented but not re-edited in the K2 files; reflected in this summary:**
+    - a source count was wrong;
+    - K2's external pages were read through a summarising fetch tool, so its "abstract" and "full" labels mean a summary of that text (see `REFERENCES.md`);
+    - two case reports are a probable duplicate and count as one case;
+    - one database record lacked its single-submitter flag.
+
+  The audit's process findings about local data handling are tracked internally.
+- **Checksums.** Each stage kept checksums of all earlier packages and confirmed they were unchanged.
+- **Documented, not silently fixed:**
   - a ClinVar consequence parse that kept only the last term;
   - one overstated count;
   - a deviation from a pre-declared rule in the CEP57 classification.
+
+## Analyses not run, and why
+
+| Analysis | Reason |
+|---|---|
+| Statistical phasing | No reference panel or genetic map; the missense allele is a singleton; it would give a misleading probability |
+| Orthogonal confirmation of the calls (for example Sanger sequencing) | Needs new patient material, outside the hackathon terms |
+| Family, long-read or linked-read phasing | No such data |
+| Splice prediction | No predictor installed; installs not authorised |
+| Residue conservation beyond one paralog | No local alignment; downloads not authorised |
+| Repeat classification or local assembly of the CEP57 signal; structural-variant population lookup | Tools or database not available; an external lookup would expose a position |
+| gnomAD frequency of the TRIP13, CEP57 and CENATAC records | Needs an owner-approved regional read; not done |
+| Full-text reading of most key papers | Not open access |
+| Wet-lab experiments | Designs only |
 
 ## What these methods cannot show
 

@@ -17,10 +17,10 @@ BUB1B is the **leading candidate gene, not a proven cause**. The data contain a 
 
 | File | Content |
 |---|---|
-| `SCIENTIFIC_SUMMARY.md` | Findings of the analysis stages K2–K6, each statement with an evidence label |
-| `METHODS.md` | Data, tools, versions, parameters and decision rules |
-| `DRUG_HYPOTHESIS_ASSESSMENT.md` | The 12 drug candidates, their criteria, the ranking rule and the result |
-| `FUNCTIONAL_TEST_DESIGNS.md` | Proposed experiments for the variants and for the two surviving drug hypotheses (not performed) |
+| `SCIENTIFIC_SUMMARY.md` | Workflow; the candidate variants by class; sequencing confidence versus function versus causality; four-gene comparison; competing explanations; findings of stages K2–K6 with evidence labels; what would change the conclusions |
+| `METHODS.md` | Data, tools, versions, parameters, decision rules, validation and audit, analyses not run |
+| `DRUG_HYPOTHESIS_ASSESSMENT.md` | The 12 drug candidates, their criteria, the ranking rule, the result and regulatory status |
+| `FUNCTIONAL_TEST_DESIGNS.md` | Proposed experiments for the variants and the two surviving drug hypotheses (not performed), what each would discriminate, and why no published experiment can be graded |
 | `REFERENCES.md` | Sources, with the access level actually used (full text, abstract, database record) |
 | `REPORT_TEMPLATE.md`, `DRUG_EVIDENCE_CARD_TEMPLATE.md` | Competition templates (unchanged) |
 

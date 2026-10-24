@@ -67,6 +67,29 @@ The criteria values for all 12 candidates are below. Applying the rule to them r
 | | vincristine; microtubule poisons, Aurora and PLK1 inhibitors | These increase chromosome missegregation, the wrong direction for MVA |
 | Out of scope (not currently approved) | NMN / nicotinamide riboside / nicotinamide; ataluren; dasatinib + quercetin | Not approved medicines, or a combination with an unapproved component |
 
+**Reclassification:** K5 moved niacin from "rejected" (in the earlier curated review) to "plausible but indirect", by applying the documented criteria. The change is recorded rather than hidden. It does not add any evidence of benefit.
+
+### Regulatory status as checked (2026-10-24)
+
+Sources: openFDA `drugsfda` and `label` records, and EMA EPAR pages or the EMA medicines-report snapshot of 2026-10-20. None of these drugs is approved for MVA. Any MVA use would be off-label, and **none is proposed**.
+
+| Candidate | FDA | EMA (central) |
+|---|---|---|
+| dasatinib | Approved (NDA and ANDAs) | Sprycel authorised |
+| niacin (nicotinic acid) | Approved (ANDAs) | Central products withdrawn |
+| gentamicin | Approved (ANDAs) | Veterinary combinations only |
+| dactinomycin | Approved | Not checked |
+| somatropin | Approved (BLAs) | Omnitrope authorised |
+| acetylcysteine | Approved (NDA and ANDAs) | No central product |
+| bortezomib | Approved (NDA and ANDAs) | Velcade authorised |
+| vincristine | Approved | Not checked |
+| microtubule poisons / Aurora / PLK1 inhibitors | Paclitaxel and vincristine approved; alisertib, volasertib, barasertib and onvansertib have no FDA application | Not checked for the class |
+| NMN / nicotinamide riboside / nicotinamide | No FDA application | No central product |
+| ataluren | No FDA application | Translarna expired |
+| dasatinib + quercetin | Dasatinib approved; quercetin has no FDA application | Quercetin has no product |
+
+**Limits:** openFDA states its data are unvalidated. EU national authorisations and other jurisdictions were not checked, and an unchecked register is not treated as empty.
+
 ## How the open genetic questions change each surviving idea
 
 | Scenario | Dasatinib | Niacin | Gentamicin |
